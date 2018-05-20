@@ -19,7 +19,7 @@ public class App
 
     @Test
     public void t() {
-        System.out.println( "This is a testng test!" );
+        System.out.println( "This is a testng test for github" );
 
     }
     
