@@ -2,16 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="59" started-at="2018-05-20T08:58:00Z" finished-at="2018-05-20T08:58:00Z">
+  <suite name="Default suite" duration-ms="7506" started-at="2018-05-27T14:27:52Z" finished-at="2018-05-27T14:28:00Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="59" started-at="2018-05-20T08:58:00Z" finished-at="2018-05-20T08:58:00Z">
-      <class name="com.selenium.seleniumtest3.App">
-        <test-method status="PASS" signature="t()[pri:0, instance:com.selenium.seleniumtest3.App@551aa95a]" name="t" duration-ms="16" started-at="2018-05-20T08:58:00Z" finished-at="2018-05-20T08:58:00Z">
+    <test name="Default test" duration-ms="7506" started-at="2018-05-27T14:27:52Z" finished-at="2018-05-27T14:28:00Z">
+      <class name="com.selenium.seleniumtest3.chrometest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.selenium.seleniumtest3.chrometest@685cb137]" name="beforeClass" is-config="true" duration-ms="4689" started-at="2018-05-27T14:27:52Z" finished-at="2018-05-27T14:27:57Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- t -->
-      </class> <!-- com.selenium.seleniumtest3.App -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="run()[pri:0, instance:com.selenium.seleniumtest3.chrometest@685cb137]" name="run" duration-ms="2787" started-at="2018-05-27T14:27:57Z" finished-at="2018-05-27T14:28:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- run -->
+      </class> <!-- com.selenium.seleniumtest3.chrometest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
