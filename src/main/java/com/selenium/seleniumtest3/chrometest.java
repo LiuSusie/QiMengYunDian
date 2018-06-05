@@ -18,7 +18,7 @@ public class chrometest {
 	    @BeforeClass
 	    public void beforeClass(){
 	       // System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
-	        System.setProperty("webdriver.chrome.driver","C:\\Users\\lenovo\\AppData\\Local\\Google\\Chrome\\Application\\chromedriver.exe");
+	        System.setProperty("webdriver.chrome.driver","C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\Application\\chromedriver.exe");
 
 	        Map<String, String> mobileEmulation = new HashMap<String, String>();
 	        //设置设备,例如:Google Nexus 7/Apple iPhone 6
@@ -30,6 +30,7 @@ public class chrometest {
 	        capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 	        try {
 	            System.out.println("开始启动driver~~~");
+
 	            driver = new ChromeDriver(capabilities);
 	            System.out.println("启动driver成功~~~");
 	        } catch (Exception e) {
