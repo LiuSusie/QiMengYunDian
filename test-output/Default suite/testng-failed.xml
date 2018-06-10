@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.selenium.seleniumtest3.App">
+      <class name="CheckPageLayout.HomePage_001_CheckUI_Test">
         <methods>
-          <include name="t"/>
+          <include name="CheckUI"/>
         </methods>
-      </class> <!-- com.selenium.seleniumtest3.App -->
+      </class> <!-- CheckPageLayout.HomePage_001_CheckUI_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

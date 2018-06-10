@@ -1,7 +1,10 @@
 package com.selenium.utils;
 
+import com.selenium.base.*;
 import java.io.File;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -18,7 +21,10 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -34,16 +40,54 @@ public class SeleniumUtil {
     /** 使用Log4j，第一步就是获取日志记录器，这个记录器将负责控制日志信息 */
     public static Logger logger = Logger.getLogger(SeleniumUtil.class.getName());
     public ITestResult it = null;
-    public WebDriver driver = null;
+    public static WebDriver driver = null;
     public WebDriver window = null;
+   
+    
+    public  void lauchBrowser(){
+       // System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\Lenovo\\AppData\\Local\\Google\\Chrome\\Application\\chromedriver.exe");
 
+        Map<String, String> mobileEmulation = new HashMap<String, String>();
+        //设置设备,例如:Google Nexus 7/Apple iPhone 6
+        //mobileEmulation.put("deviceName", "Google Nexus 7"); 
+        mobileEmulation.put("deviceName", "iPhone X");   //这里是要使用的模拟器名称，就是浏览器中模拟器中的顶部型号
+        Map<String, Object> chromeOptions = new HashMap<String, Object>();     
+        chromeOptions.put("mobileEmulation", mobileEmulation);     
+        DesiredCapabilities capabilities = DesiredCapabilities.chrome();       
+        capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+        try {
+            System.out.println("开始启动driver~~~");
+            
+            driver = new ChromeDriver(capabilities);
+            System.out.println("启动driver成功~~~");
+        //    driver.get("https://mall.qimeng.fm");
+           
+
+        } catch (Exception e) {
+            System.out.println("启动driver失败~~~");
+            System.out.println(e.getMessage());
+        }     
+    }
+    
+   
+    
+  public  static WebDriver getDriver() {
+  	  return driver;
+    }
+    
     
     /**
      * get方法包装
      * */
     public void get(String url) {
-        driver.get(url);
+     driver.get(url);
+    //	getDriver().get(url);
         logger.info("打开测试页面:[" + url + "]");
+     //   Base bB = new Base();
+ //       bB.driver.get(url);
+       //bB.getDriver().get(url);
+        
     }
 
     /**

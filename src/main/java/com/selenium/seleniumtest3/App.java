@@ -20,10 +20,12 @@ public class App
     @Test
     public void t() {
         System.out.println( "This is a testng test for github" );
-        WebDriver driver = new FirefoxDriver();
-        driver.get("http://www.baidu.com");
+//        WebDriver driver = new FirefoxDriver();
+        
+//       driver.get("http://www.baidu.com");
         SeleniumUtil  su=new SeleniumUtil();
         su.get("http://www.baidu.com");
+ //       su.get("http://www.baidu.com");
 
     }
     
